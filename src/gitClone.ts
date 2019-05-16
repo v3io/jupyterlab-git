@@ -63,7 +63,7 @@ export class GitClone extends Widget {
      * Git repo and disables/enables the clone button accordingly.
      */
     disableIfInGitDirectory(): void {
-        this.gitApi.allHistory(
+        this.gitApi.showTopLevel(
             this.fileBrowser.model.path
         ).then(response => {
                 if (response.code == 0) {
